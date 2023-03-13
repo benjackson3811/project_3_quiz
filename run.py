@@ -30,7 +30,7 @@ def check_answer(answer, guess):
         print("Correct!")
         return 1
     else:
-        print("Wrong!")
+        print("Wrong! The answer is "+str(answer))
         return 0
 
 
@@ -47,21 +47,31 @@ def display_score(correct_guesses, guesses):
     print('Guesses: ', end="")
     for i in guesses:
         print(i, end=" ")
+    print()
+
+    score = int((correct_guesses/len(questions))*100)
+    print("Your score is: "+str(score)+"%")
 
 
 # -------------------
 def play_again():
-    pass
+    response = input("Do you want to play again? (yes or no): ")
+    response = response.upper()
 
+    if response == "Yes":
+        return True
+    else:
+        return False
 # -------------------
 
 
 questions = {
-    "What other name is Cape Town known as?: ": "A",
-    "Which provenice is the city located?: ": "A",
-    "What year was the city founded?: ": "C",
-    "What Language is is majorly used in the city?: ": "D",
-    "Which of these was instrutmental in the creation of the city?: ": "D"
+    "What other name is Cape Town known as?: ": "A. Mother City",
+    "Which provenice is the city located?: ": "A. Western Cape",
+    "What year was the city founded?: ": "C. 1652",
+    "What Language is is majorly used in the city?: ": "D. English",
+    "Which of these was instrutmental in the creation of the city?: ":
+    "D. Dutch East India Company"
 }
 
 options = [["A. Mother City", "B. New City", "C. Kaap Stad", "D. The City!"],
@@ -71,3 +81,8 @@ options = [["A. Mother City", "B. New City", "C. Kaap Stad", "D. The City!"],
     ["A. HSBC", "B. Coke", "C. Gap", "D. Dutch East India Company"]]
 
 new_game()
+
+while play_again():
+    new_game()
+
+print("Byyeee!!!")
