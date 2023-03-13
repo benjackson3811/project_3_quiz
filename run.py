@@ -2,6 +2,7 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
+import questions
 
 # -------------------
 def new_game():
@@ -12,8 +13,8 @@ def new_game():
     for question in questions:
         print("-------------------")
         print(question)
-        for i in options[question_num-1]:
-            print(i)
+        for option in options[question_num-1]:
+            print(option)
         guess = input("Enter (A, B, C, or D): ")
         guess = guess.upper()
         guesses.append(guess)
@@ -27,7 +28,7 @@ def new_game():
 # -------------------
 def check_answer(answer, guess):
     if answer == guess:
-        print("Correct!")
+        print("⭐ Correct! ⭐!")
         return 1
     else:
         print("Wrong! The correct answer is " +str(answer))
@@ -66,7 +67,7 @@ def play_again():
 
 
 questions = {
-    "What other name is Cape Town known as?: ": "A. Mother City",
+    "What other name is Cape Town known as?: ": "A",
     "Which provenice is the city located?: ": "A",
     "What year was the city founded?: ": "C",
     "What Language is is majorly used in the city?: ": "D",
