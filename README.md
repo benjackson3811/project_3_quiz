@@ -1,31 +1,67 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+Site Purpose
 
-Welcome benjackson3811,
+As a current resident of Cape Town.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+The purpose of the site is to create a terminal based interactive quiz for new visitors on three interesting areas in and around Cape Town.
 
-## Reminders
+Cape Town History,
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+The Sea.
 
-## Creating the Heroku app
+Land Animals in South Africa.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+User Stories.
+User Story.
+1. I want to immediately know what the purpose of the quiz on landing on the page.
+2. I want to know what the options of the quiz topics.
+3. I want to have clear and concise multiple choices question and answers
+4. I want to have feedback on which questions I get right and wrong are.
+5. I want to have feedback back if there is an error.
+6. I want to get a final score after the quiz is over.
+7. I want to have the choice to replay the quiz.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+Site Owner User Story.
+1. Create a simple, easy to follow and easy to use quiz.
+2. Provide instructions for the quiz before the user starts the quiz.
+3. Provide the topics for the quiz before the user starts the quiz.
+4. Ensure there is immediate error feedback on the validation on the inputs.
+This will highlight if there is errors. - in the input of username, the questions.
+5. I want there to be feedback for the user when playing the quiz. If their answer is correct + their total score.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+Features
 
-Connect your GitHub repository and deploy as normal.
+Start
 
-## Constraints
+Quiz Overview
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+instructions
 
------
-Happy coding!
+Choose Quiz Topics
+
+Southern Whales
+
+Cape Town History
+
+South African Animals
+
+separate py sheets- with questions
+
+questions answers + validations. Options a,b,c,d
+
+End score
+
+End game() - Options of new game, leaderboard, quit
+
+
+Credits
+
+https://www.youtube.com/watch?v=zehwgTB0vV8
+
+https://www.youtube.com/watch?v=SgQhwtIoQ7o
+
+https://www.scaler.com/topics/how-to-clear-screen-in-python/
+
+https://stackoverflow.com/questions/58913904/how-to-quit-on-a-python-quiz
+
+https://realpython.com/python-quiz-application/#step-2-make-your-application-user-friendly
