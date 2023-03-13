@@ -9,16 +9,16 @@ def new_game():
     correct_guesses = 0
     question_num = 1
 
-    for key in questions:
+    for question in questions:
         print("-------------------")
-        print(key)
+        print(question)
         for i in options[question_num-1]:
             print(i)
         guess = input("Enter (A, B, C, or D): ")
         guess = guess.upper()
         guesses.append(guess)
 
-        correct_guesses += check_answer(questions.get(key), guess)
+        correct_guesses += check_answer(questions.get(question), guess)
         question_num += 1
 
     display_score(correct_guesses, guesses)
@@ -30,7 +30,7 @@ def check_answer(answer, guess):
         print("Correct!")
         return 1
     else:
-        print("Wrong! The answer is "+str(answer))
+        print("Wrong! The correct answer is " +str(answer))
         return 0
 
 
@@ -40,13 +40,13 @@ def display_score(correct_guesses, guesses):
     print("Results")
     print("-------------------")
     print('Answers: ', end="")
-    for i in questions:
-        print(questions.get(i), end=" ")
+    for question in questions:
+        print(questions.get(question), end=" ")
     print()
 
     print('Guesses: ', end="")
-    for i in guesses:
-        print(i, end=" ")
+    for guess in guesses:
+        print(guess, end=" ")
     print()
 
     score = int((correct_guesses/len(questions))*100)
@@ -56,9 +56,9 @@ def display_score(correct_guesses, guesses):
 # -------------------
 def play_again():
     response = input("Do you want to play again? (yes or no): ")
-    response = response.upper()
+    lower_response = response.lower()  # Change to lower
 
-    if response == "Yes":
+    if lower_response == "yes":  # Change "yes" to lower as well
         return True
     else:
         return False
@@ -67,11 +67,10 @@ def play_again():
 
 questions = {
     "What other name is Cape Town known as?: ": "A. Mother City",
-    "Which provenice is the city located?: ": "A. Western Cape",
-    "What year was the city founded?: ": "C. 1652",
-    "What Language is is majorly used in the city?: ": "D. English",
-    "Which of these was instrutmental in the creation of the city?: ":
-    "D. Dutch East India Company"
+    "Which provenice is the city located?: ": "A",
+    "What year was the city founded?: ": "C",
+    "What Language is is majorly used in the city?: ": "D",
+    "Which of these was instrutmental in the creation of the city?: ": "D"
 }
 
 options = [["A. Mother City", "B. New City", "C. Kaap Stad", "D. The City!"],
