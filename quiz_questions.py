@@ -1,3 +1,4 @@
+
 questions = {
     "What other name is Cape Town known as?: ": "A",
     "Which provenice is the city located?: ": "A",
@@ -11,6 +12,20 @@ questions = {
     "What is mined at Kimberley in South Africa? ": "D"
 }
 
+answers = [
+    "A",
+    "A",
+    "C",
+    "D",
+    "D",
+    "B",
+    "A",
+    "D",
+    "A",
+    "D"
+]
+
+
 options = [
     ["A. Mother City", "B. New City", "C. Kaap Stad", "D. The City!"],
     ["A. Western Cape", "B. Cape Fear", "C. Cape Beer ", "D. Africa"],
@@ -22,5 +37,4 @@ options = [
     ["A. Whiskey", "B. Vodka", "C. Sake", "D. Wine"],
     ["A. South", "B. East", "C. West", "D. North"],
     ["A. Wine", "B. Silver", "C. Gold", "D. Diamonds"],
-
 ]

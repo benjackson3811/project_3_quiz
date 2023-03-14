@@ -65,3 +65,8 @@ https://www.scaler.com/topics/how-to-clear-screen-in-python/
 https://stackoverflow.com/questions/58913904/how-to-quit-on-a-python-quiz
 
 https://realpython.com/python-quiz-application/#step-2-make-your-application-user-friendly
+
+error
+https://stackoverflow.com/questions/19895028/randomly-shuffling-a-dictionary-in-python
+
+https://stackoverflow.com/questions/71838278/attribute-error-list-object-has-no-attribute-get

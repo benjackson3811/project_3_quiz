@@ -5,7 +5,9 @@
 import sys
 import os
 import time
+import random
 from quiz_questions import questions
+from quiz_questions import answers
 from quiz_questions import options
 
 
@@ -49,6 +51,23 @@ def display_menu():
         clear_screen()
         print("Invalid Selection - please select one of the the three options")
         return display_menu()
+# -------------------
+
+
+def game_instructions():
+    """
+    game instructions for the user
+    """
+    print("There are three quiz topics you can asnwer questions on")
+    print(" 1: Cape Town History")
+    print(" 2: The Sea. ")
+    print(" South African Land Answers")
+    print(" For each topic, there are 5 multiple choice questions.")
+    print(" You have four options, A, B, C or D")
+    print(" If your answer is correct, the system will tell you!")
+    print()
+    print(" Press any button to go back to the main screen")
+    clear_screen()
 
 
 # -------------------
@@ -67,41 +86,27 @@ def new_game():
     guesses = []
     correct_guesses = 0
     question_num = 1
+    temp_list = list(zip(questions, answers, options))
+    random.shuffle(temp_list)
+    new_questions, new_answers, new_options = zip(*temp_list)
+    new_questions, new_answers, new_options = list(new_questions), list(new_answers), list(new_options)
 
-
-    for keys in questions:
+    for index, question in enumerate(new_questions):
         print("-------------------")
-        print(keys)
-        for option in options[question_num-1]:
+        print(question)
+        for option in new_options[question_num-1]:
             print(option)
         guess = input("Enter (A, B, C, or D): ")
         guess = guess.upper()
         guesses.append(guess)
 
-        correct_guesses += check_answer(questions.get(keys), guess)
+        correct_guesses += check_answer(new_answers[index], guess)
         question_num += 1
 
     display_score(correct_guesses, guesses)
-
-
 # -------------------
-def game_instructions():
-    """
-    game instructions for the user
-    """
-    print("There are three quiz topics you can asnwer questions on")
-    print(" 1: Cape Town History")
-    print(" 2: The Sea. ")
-    print(" South African Land Answers")
-    print(" For each topic, there are 5 multiple choice questions.")
-    print(" You have four options, A, B, C or D")
-    print(" If your answer is correct, the system will tell you!")
-    print()
-    print(" Press any button to go back to the main screen")
-    clear_screen()
 
 
-# -------------------
 def check_answer(answer, guess):
     if answer == guess:
         print("⭐ Correct! ⭐!")
