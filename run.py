@@ -11,11 +11,21 @@ from quiz_questions import answers
 from quiz_questions import options
 
 
-def display_menu():
+def display_options():
     """
     function to show the user the menu options avaliable to them.
 
     """
+    print()
+    print()
+    print("-----------------------------")
+    print()
+    print("Welcome to the Cape Town Quiz")
+    print()
+    print("-----------------------------")
+    print()
+    time.sleep(4)
+    clear_screen()
     selection = input("""
     -----------------------------
     1: Start Quiz
@@ -32,13 +42,14 @@ def display_menu():
     elif selection == "2":
         clear_screen()
         game_instructions()
-        display_menu()
+        display_options()
     elif selection == "3":
         sys.exit
+        clear_screen()
     else:
         clear_screen()
         print("Invalid Selection - please select one of the the three options")
-        return display_menu()
+        return display_options()
 # -------------------
 
 
@@ -54,7 +65,8 @@ def game_instructions():
     print(" You have four options, A, B, C or D")
     print(" If your answer is correct, the system will tell you!")
     print()
-    print(" Press any button to go back to the main screen")
+    print()
+    input("Press any button to go back to the main screen.  ")
     clear_screen()
 # -------------------
 
@@ -87,11 +99,13 @@ def new_game():
         guess = input("Enter (A, B, C, or D): ")
         guess = guess.upper()
         guesses.append(guess)
-        
+                    
         correct_guesses += check_answer(new_answers[index], guess)
         question_num += 1
-        if (question_num == 5):
+        if question_num == 5:
             break
+        time.sleep(1)
+        clear_screen()
 
     display_score(correct_guesses, guesses)
 # -------------------
@@ -121,7 +135,7 @@ def play_again():
     response = input("Do you want to play again? (yes or no): ")
     lower_response = response.lower()
 
-    if lower_response == "yes":  # Change "yes" to lower as well
+    if lower_response == "yes":  
         return True
     else:
         return False
@@ -129,19 +143,10 @@ def play_again():
 
 
 def front_screen():
-    """shows the display menu function options for the user"""
-    print("-----------------------------")
-    print()
-    print()
-    print("Welcome to the Cape Town Quiz")
-    print()
-    print()
-    print("-----------------------------")
-    clear_screen()
-    time.sleep(2)
-    print()
-    print()
-    display_menu()
+    """
+    shows the display menu function options for the user
+    """
+    display_options()
 
     while play_again():
         new_game()
