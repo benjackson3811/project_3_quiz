@@ -11,7 +11,7 @@ from quiz_questions import answers
 from quiz_questions import options
 
 
-def display_options():
+def start_menu():
     """
     function to show the user the menu options avaliable to them.
 
@@ -24,7 +24,7 @@ def display_options():
     print()
     print("-----------------------------")
     print()
-    time.sleep(4)
+    time.sleep(2)
     clear_screen()
     selection = input("""
     -----------------------------
@@ -42,14 +42,14 @@ def display_options():
     elif selection == "2":
         clear_screen()
         game_instructions()
-        display_options()
+        start_menu()
     elif selection == "3":
         sys.exit
         clear_screen()
     else:
         clear_screen()
         print("Invalid Selection - please select one of the the three options")
-        return display_options()
+        return start_menu()
 # -------------------
 
 
@@ -57,12 +57,16 @@ def game_instructions():
     """
     game instructions for the user
     """
-    print("There are three quiz topics you can asnwer questions on")
+    print(" You will answer five questions!")
+    print()
+    print(" They will be a mixture of three topics")
+    print()
     print(" 1: Cape Town History")
     print(" 2: The Sea. ")
-    print(" South African Land Answers")
-    print(" For each topic, there are 5 multiple choice questions.")
-    print(" You have four options, A, B, C or D")
+    print(" 3: South African Land Answers")
+    print()
+    print(" Each question has four options, A, B, C or D")
+    print()
     print(" If your answer is correct, the system will tell you!")
     print()
     print()
@@ -99,33 +103,34 @@ def new_game():
         guess = input("Enter (A, B, C, or D): ")
         guess = guess.upper()
         guesses.append(guess)
-                    
         correct_guesses += check_answer(new_answers[index], guess)
         question_num += 1
-        if question_num == 5:
+        if question_num == 6:
             break
         time.sleep(1)
         clear_screen()
 
     display_score(correct_guesses, guesses)
+
 # -------------------
 
 
-def check_answer(answer, guess):
-    if answer == guess:
+def check_answer(new_answer, guess):
+    if new_answer == guess:
         print("⭐ Correct! ⭐!")
         return 1
     else:
-        print("Wrong! The correct answer is " + str(answer))
+        print("Wrong! The correct answer is " + str(new_answer))
         return 0
 
 
 # -------------------
-def display_score(correct_guesses, guesses):
+def display_score(correct_guesses, answers):
+    print("Calculating the score!")
     print("-------------------")
-    print("Results")
+    print("The results!")
     print()
-    score = int((correct_guesses/len(questions))*100)
+    score = int((correct_guesses/len(answers))*100)
     print("Your score is: "+str(score)+"%")
     print("-------------------")
 
@@ -135,7 +140,7 @@ def play_again():
     response = input("Do you want to play again? (yes or no): ")
     lower_response = response.lower()
 
-    if lower_response == "yes":  
+    if lower_response == "yes":
         return True
     else:
         return False
@@ -146,7 +151,7 @@ def front_screen():
     """
     shows the display menu function options for the user
     """
-    display_options()
+    start_menu()
 
     while play_again():
         new_game()

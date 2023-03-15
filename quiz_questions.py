@@ -1,15 +1,25 @@
 
 questions = {
-    "What other name is Cape Town known as?: ": "A",
-    "Which provenice is the city located?: ": "A",
+    "What other name is Cape Town known as? ": "A",
+    "Which provenice is the city located? ": "A",
     "What year was the city founded?: ": "C",
     "What Language is is majorly used in the city?: ": "D",
     "Which of these was instrutmental in the creation of the city?: ": "D",
     "When did Cape Town host the football world cup?: ": "B",
-    "What is the name of the ocean that surrounds Cape Town?: ": "A",
+    "What is the name of the ocean that surrounds Cape Town? ": "A",
     "What Alcholic beverage is the Cape famous for producing? ": "D",
     "In which part of South Africa in Cape Town located? ": "A",
-    "What is mined at Kimberley in South Africa? ": "D"
+    "What is mined at Kimberley in South Africa? ": "D",
+    "Which percentage of the Earth’s surface is covered by oceans? ": "D",
+    "What is the % of the planet’s oceans that has been explored? ": "A",
+    "Which one of the following islands is not in the Atlantic Ocean? ": "C",
+    "Which of the following oceans is the smallest and shallowest? ": "D",
+    "The Pacific is home to the deepest known trench - what's its name? ": "A",
+    "How many oceans does the equator cross? ": "B",
+    "The Ring of Fire is along the floor of which ocean? ": "B",
+    "Approximately ____ of the Earth's surface is covered by ocean. ": "D",
+    "Which ocean is frozen for much of the year? ": "A",
+    "Which ocean lies between Australia and Africa? ": "A",
 }
 
 answers = [
@@ -22,7 +32,17 @@ answers = [
     "A",
     "D",
     "A",
-    "D"
+    "D",
+    "D",
+    "A",
+    "C",
+    "D",
+    "A",
+    "B",
+    "B",
+    "D",
+    "A",
+    "A"
 ]
 
 
@@ -37,4 +57,14 @@ options = [
     ["A. Whiskey", "B. Vodka", "C. Sake", "D. Wine"],
     ["A. South", "B. East", "C. West", "D. North"],
     ["A. Wine", "B. Silver", "C. Gold", "D. Diamonds"],
+    ["A. 20%", "B. 40%", "C. 50%", "D. 70%"],
+    ["A. 5%", "B. 25%", "C. 50%", "D. 75%"],
+    ["A. The Bahamas", "B. Azores", "C. Madagascar", "D. Canary Islands"],
+    ["A. Atlantic", "B. Pacific", "C. Indian", "D. Arctic"],
+    ["A. Mariana", "B. Kermadec", "C. South Sandwich", "D. Izu-Ogasawara"],
+    ["A. 2", "B. 3", "C. 4", "D. 5"],
+    ["A. Atlantic", "B. Pacific", "C. Southern", "D. Arctic"],
+    ["A. 40%", "B. 45%", "C. 56%", "D. 71%"],
+    ["A. Arctic", "B. Atlantic", "C. Indian", "D. Pacific"],
+    ["A. Indian", "B. Arctic", "C. Atlantic", "D. Pacific"]
 ]
