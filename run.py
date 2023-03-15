@@ -16,23 +16,11 @@ def display_menu():
     function to show the user the menu options avaliable to them.
 
     """
-    print("-----------------------------")
-    print()
-    print()
-    print("Welcome to the Cape Town Quiz")
-    print()
-    print()
-    print("-----------------------------")
-    clear_screen()
-    time.sleep(2)
-    print()
-    print()
-
     selection = input("""
     -----------------------------
     1: Start Quiz
     2: Game Instructions
-    3: High Score
+    3: Quit Game
     -----------------------------
     Please enter a choice
     1, 2 or 3
@@ -68,9 +56,9 @@ def game_instructions():
     print()
     print(" Press any button to go back to the main screen")
     clear_screen()
-
-
 # -------------------
+
+
 def clear_screen():
     """
     function to clear screen
@@ -99,9 +87,11 @@ def new_game():
         guess = input("Enter (A, B, C, or D): ")
         guess = guess.upper()
         guesses.append(guess)
-
+        
         correct_guesses += check_answer(new_answers[index], guess)
         question_num += 1
+        if (question_num == 5):
+            break
 
     display_score(correct_guesses, guesses)
 # -------------------
@@ -120,19 +110,10 @@ def check_answer(answer, guess):
 def display_score(correct_guesses, guesses):
     print("-------------------")
     print("Results")
-    print("-------------------")
-    print('Answers: ', end="")
-    for question in questions:
-        print(questions.get(question), end=" ")
     print()
-
-    print('Guesses: ', end="")
-    for guess in guesses:
-        print(guess, end=" ")
-    print()
-
     score = int((correct_guesses/len(questions))*100)
     print("Your score is: "+str(score)+"%")
+    print("-------------------")
 
 
 # -------------------
@@ -149,7 +130,17 @@ def play_again():
 
 def front_screen():
     """shows the display menu function options for the user"""
-
+    print("-----------------------------")
+    print()
+    print()
+    print("Welcome to the Cape Town Quiz")
+    print()
+    print()
+    print("-----------------------------")
+    clear_screen()
+    time.sleep(2)
+    print()
+    print()
     display_menu()
 
     while play_again():

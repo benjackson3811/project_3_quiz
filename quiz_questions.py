@@ -30,7 +30,7 @@ options = [
     ["A. Mother City", "B. New City", "C. Kaap Stad", "D. The City!"],
     ["A. Western Cape", "B. Cape Fear", "C. Cape Beer ", "D. Africa"],
     ["A. 1625", "B. 1642", "C. 1652", "D. 1632"],
-    ["A. Bandu", "B. Xhorsa", "C. Afikaans", "D. English"],
+    ["A. Bandu", "B. Xhosa", "C. Afrikaans", "D. English"],
     ["A. HSBC", "B. Coke", "C. Gap", "D. Dutch East India Company"],
     ["A, 2006", "B. 2010", "C. 2014", "D. 2018"],
     ["A. Atlantic", "B. Indian", "C. Artic", "D. Pacific"],
