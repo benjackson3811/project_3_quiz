@@ -4,7 +4,6 @@
 
 import sys
 import os
-import time
 import random
 from quiz_questions import questions
 from quiz_questions import answers
@@ -14,9 +13,7 @@ from quiz_questions import options
 def start_menu():
     """
     function to show the user the menu options avaliable to them.
-
     """
-    print()
     print()
     print("      -----------------------------")
     print()
@@ -24,8 +21,6 @@ def start_menu():
     print()
     print("      -----------------------------")
     print()
-    time.sleep(2)
-    clear_screen()
     selection = input("""
     -----------------------------
     1: Start Quiz
@@ -47,7 +42,6 @@ def start_menu():
         sys.exit
         clear_screen()
     else:
-        clear_screen()
         print("Invalid Selection - please select one of the the three options")
         return start_menu()
 # -------------------
@@ -55,15 +49,15 @@ def start_menu():
 
 def game_instructions():
     """
-    game instructions for the user
+    How to play the game instructions for the user
     """
-    print(" You will answer five questions!")
+    print(" You will answer eight questions!")
     print()
-    print(" They will be a mixture of three topics")
+    print(" They will all be on key parts of Cape Town")
     print()
-    print(" 1: Cape Town History")
-    print(" 2: The Sea")
-    print(" 3: South African land animals")
+    print(" - Cape Town History")
+    print(" - The Sea")
+    print(" - South African land animals")
     print()
     print(" Each question has four options, A, B, C or D")
     print()
@@ -101,31 +95,33 @@ def new_game():
         for option in new_opt[question_num-1]:
             print(option)
         guess = input("Enter (A, B, C, or D): ")
-        guess = guess.upper()
         guesses.append(guess)
         correct_guesses += check_answer(new_ans[index], guess)
         question_num += 1
-        if question_num == 6:
+        if question_num == 11:
             break
-        time.sleep(1)
-        clear_screen()
 
     display_score(correct_guesses, guesses)
-
 # -------------------
 
 
-def check_answer(new_answer, guess):
-    if new_answer == guess:
+def check_answer(new_ans, guess):
+    """
+    function to check the answer given to the question
+    """
+    if new_ans == guess:
         print("⭐ Correct! ⭐!")
         return 1
     else:
-        print("Wrong! The correct answer is " + str(new_answer))
+        print("Wrong! The correct answer is " + str(new_ans))
         return 0
 
 
 # -------------------
 def display_score(correct_guesses, answers):
+    """
+    function to show the % score of the questions answered
+    """
     print("Calculating the score!")
     print("-------------------")
     print("The results!")
@@ -137,6 +133,9 @@ def display_score(correct_guesses, answers):
 
 # -------------------
 def play_again():
+    """
+    function to provide the option to play again
+    """
     response = input("Do you want to play again? (yes or no): ")
     lower_response = response.lower()
 
