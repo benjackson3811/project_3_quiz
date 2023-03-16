@@ -5,6 +5,7 @@
 import sys
 import os
 import random
+import time
 from quiz_questions import questions
 from quiz_questions import answers
 from quiz_questions import options
@@ -33,6 +34,7 @@ def game_navigation():
     2) Instructions
     3) Quit the game
     """
+    time.sleep(2)
 
     selection = input("""
 
@@ -149,38 +151,38 @@ def guess_validation(guess_try):
     if input != (A, B, C, or D - error shown and user will have to answer again
     """
     if guess_try not in ['A', 'B', 'C', 'D']:
-        print("Error - invalid.")
+        print("Stop! ⛔ Error - invalid.")
         print("Please enter [A, B , C, or D only")
         return False
-    else: 
+    else:
         return True
-
-
 # -------------------
 
 
 def check_answer(new_ans, guess):
     """
-    function to check the answer given to the question
+    function purpose: to check the answer given to the question
+    function set up: if statement to check the guess = answer
     """
     if new_ans == guess:
         print("⭐ Correct! ⭐!")
         return 1
     else:
-        print("Wrong! The correct answer is " + str(new_ans))
+        print("⛔ Wrong! The correct answer is " + str(new_ans))
         return 0
 
 
 # -------------------
-def display_score(correct_guesses, answers):
+def display_score(correct_guesses, new_ans):
     """
-    function to show the % score of the questions answered
+    function purpose: to show the user % score of the questions answered
+    function set up: math element dividing the correct guesses by the answers
     """
     print("Calculating the score!")
     print("-------------------")
     print("The results!")
     print()
-    score = int((correct_guesses/len(answers))*100)
+    score = int((correct_guesses/len(new_ans))*100)
     print("Your score is: "+str(score)+"%")
     print("-------------------")
 
@@ -188,21 +190,32 @@ def display_score(correct_guesses, answers):
 # -------------------
 def play_again():
     """
-    function to provide the option to play again
+    Funciton purpose: to provide the option to play again
+    Function set up:
+    If/ elif statement - three options
+    1) new game
+    2) exits game
+    3) validates the response to ensure correct response given.
     """
+    print("How about another game? ")
     response = input("Do you want to play again? (yes or no): ")
-    lower_response = response.lower()
+    response = response.upper()()
 
-    if lower_response == "yes":
-        return True
-    else:
-        return False
+    if response == "YES":
+        game_navigation()
+    elif response == "NO":
+        clear_screen()
+        print("Thanks for playing the game")
+    elif response not in {response == "YES", response == "NO"}:
+        play_again()
 # -------------------
 
 
 def front_screen():
     """
+    function purpose: to archor the game - 
     shows the display menu function options for the user
+    set up - a while statement
     """
     game_start()
 
