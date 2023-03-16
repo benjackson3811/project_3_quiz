@@ -18,11 +18,11 @@ def start_menu():
     """
     print()
     print()
-    print("-----------------------------")
+    print("      -----------------------------")
     print()
-    print("Welcome to the Cape Town Quiz")
+    print("      Welcome to the Cape Town Quiz")
     print()
-    print("-----------------------------")
+    print("      -----------------------------")
     print()
     time.sleep(2)
     clear_screen()
@@ -62,8 +62,8 @@ def game_instructions():
     print(" They will be a mixture of three topics")
     print()
     print(" 1: Cape Town History")
-    print(" 2: The Sea. ")
-    print(" 3: South African Land Answers")
+    print(" 2: The Sea")
+    print(" 3: South African land animals")
     print()
     print(" Each question has four options, A, B, C or D")
     print()
@@ -92,18 +92,18 @@ def new_game():
     question_num = 1
     temp_list = list(zip(questions, answers, options))
     random.shuffle(temp_list)
-    new_questions, new_answers, new_options = zip(*temp_list)
-    new_questions, new_answers, new_options = list(new_questions), list(new_answers), list(new_options)
+    new_qst, new_ans, new_opt = zip(*temp_list)
+    new_qst, new_ans, new_opt = list(new_qst), list(new_ans), list(new_opt)
 
-    for index, question in enumerate(new_questions):
+    for index, question in enumerate(new_qst):
         print("-------------------")
         print(question)
-        for option in new_options[question_num-1]:
+        for option in new_opt[question_num-1]:
             print(option)
         guess = input("Enter (A, B, C, or D): ")
         guess = guess.upper()
         guesses.append(guess)
-        correct_guesses += check_answer(new_answers[index], guess)
+        correct_guesses += check_answer(new_ans[index], guess)
         question_num += 1
         if question_num == 6:
             break
