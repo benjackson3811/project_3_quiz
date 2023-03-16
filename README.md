@@ -1,6 +1,6 @@
-## Portfolio_Project_3 --- Python_Essentials
+## [Portfolio_Project_3 --- Python_Essentials]
 
-##Cape Town Quiz.
+## Cape Town Quiz.
 
 The project is a terminal based quiz game. The purpose of the quiz is to answer five questions at random and get a score. 
 The Quiz is a terminal based interactive quiz where the user answers questions on Cape Towns History, South African land Animals and the Sea
@@ -9,19 +9,19 @@ Play the game here - https://cape-town-quiz.herokuapp.com/
 
 ## Table of Contents
 
-[#Table of Contents](#table-of-contents)
+[Table of Contents](#table-of-contents)
 
 [How to Play](#how-to-play)
 [Features](#features)
--[Front Screen](#Front Screen)
--[Display Menu](#display_menu)
--[Game_Instructions](#game_instructions)
--[New Game](#new_game)
--[Clear Screen](#clear_screen)
--[Check Answer](#check_answer)
--[Display Score](#display_score)
--[Play Again](#play-again)
--[system_exit](#system_exit)
+- [Front Screen](#Front Screen)
+- [Display Menu](#display_menu)
+- [Game_Instructions](#game_instructions)
+- [New Game](#new_game)
+- [Clear Screen](#clear_screen)
+- [Check Answer](#check_answer)
+- [Display Score](#display_score)
+- [Play Again](#play-again)
+- [system_exit](#system_exit)
 
 [Data-Model](#data-model)
 
@@ -30,8 +30,8 @@ Play the game here - https://cape-town-quiz.herokuapp.com/
 [Credits](#credits)
 
 [Testing](#testing)
--[Bugs Found and Fixed](#bugs-found-and-fixed)
--[Unresolved Bugs](#unresolved-bugs)
+- [Bugs Found and Fixed](#bugs-found-and-fixed)
+- [Unresolved Bugs](#unresolved-bugs)
 
 [Technologies Used](#technologies-used)
 
@@ -43,8 +43,9 @@ Play the game here - https://cape-town-quiz.herokuapp.com/
 
 [Acknowledgements](#acknowledgements)
 
-
 [Back to Top](#table-of-contents)
+
+<hr>
 
 ## How to Play
 
