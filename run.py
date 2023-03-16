@@ -10,9 +10,9 @@ from quiz_questions import answers
 from quiz_questions import options
 
 
-def start_menu():
+def game_start():
     """
-    function to show the user the menu options avaliable to them.
+    Start Menu Function
     """
     print()
     print("      -----------------------------")
@@ -21,7 +21,22 @@ def start_menu():
     print()
     print("      -----------------------------")
     print()
+    game_navigation()
+# -------------------
+
+
+def game_navigation():
+    """
+    Game navigation functions to show directly after the game_start function.
+    Function purpose is to provide the user with three choices.
+    1) play the game straight away.
+    2) Instructions
+    3) Quit the game
+    """
+
     selection = input("""
+
+
     -----------------------------
     1: Start Quiz
     2: Game Instructions
@@ -30,6 +45,7 @@ def start_menu():
     Please enter a choice
     1, 2 or 3
     -----------------------------
+
     """)
     if selection == "1":
         clear_screen()
@@ -37,13 +53,13 @@ def start_menu():
     elif selection == "2":
         clear_screen()
         game_instructions()
-        start_menu()
+        game_navigation()()
     elif selection == "3":
         sys.exit
         clear_screen()
     else:
         print("Invalid Selection - please select one of the the three options")
-        return start_menu()
+        return game_navigation()
 # -------------------
 
 
@@ -53,7 +69,7 @@ def game_instructions():
     """
     print(" You will answer eight questions!")
     print()
-    print(" They will all be on key parts of Cape Town")
+    print(" They will all be on topics on Cape Town")
     print()
     print(" - Cape Town History")
     print(" - The Sea")
@@ -94,7 +110,8 @@ def new_game():
         print(question)
         for option in new_opt[question_num-1]:
             print(option)
-        guess = input("Enter (A, B, C, or D): ")
+        guess = guess_input()
+        guess_validation(guess)
         guesses.append(guess)
         correct_guesses += check_answer(new_ans[index], guess)
         question_num += 1
@@ -102,6 +119,43 @@ def new_game():
             break
 
     display_score(correct_guesses, guesses)
+# -------------------
+
+
+def guess_input():
+    """
+    Function purpose:  to recieved the inputted guess.
+    Function set up: a while loop.
+    Guess = varible.
+    variable passed and checked in guess validate() validated
+     to make sure the guess is A,B,C,D
+    """
+    while True:
+        guess_try = input("Enter (A, B, C, or D):\n ")
+        guess = guess_try
+
+        if guess_validation(guess):
+            break
+    return guess
+# -------------------
+
+
+def guess_validation(guess_try):
+    """
+    Function purpose: Validate the guess input to ensure only
+    A,B,C,D answers are given
+    Function set up:
+    if input == (A, B, C, or D) this is invalid - no error will show.
+    if input != (A, B, C, or D - error shown and user will have to answer again
+    """
+    if guess_try not in ['A', 'B', 'C', 'D']:
+        print("Error - invalid.")
+        print("Please enter [A, B , C, or D only")
+        return False
+    else: 
+        return True
+
+
 # -------------------
 
 
@@ -150,10 +204,10 @@ def front_screen():
     """
     shows the display menu function options for the user
     """
-    start_menu()
+    game_start()
 
     while play_again():
-        new_game()
+        game_navigation()()
 
     print("Thanks for playing!!!")
 
