@@ -13,7 +13,7 @@ Play the game here - https://cape-town-quiz.herokuapp.com/
 
 [How to Play](#how-to-play)
 [Features](#features)
-- [Front Screen](#Front Screen)
+- [Front Screen](#Front-screen)
 - [Display Menu](#display_menu)
 - [Game_Instructions](#game_instructions)
 - [New Game](#new_game)
