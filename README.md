@@ -39,7 +39,7 @@ Play the game here - https://cape-town-quiz.herokuapp.com/
 
 [Game Link](#game-link)
 
-[Cloning of the project](#cloning-of the-project)
+[Cloning of the project](#cloning-of-the-project)
 
 [Acknowledgements](#acknowledgements)
 
