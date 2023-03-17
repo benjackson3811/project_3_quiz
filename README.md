@@ -139,6 +139,7 @@ The user is provided the option to play again.
 ### Game exit
 
 The user is given the option to leave the quiz.
+
 ![game exit](./readme.images/replay-game-validation.png)
 
 [Back to Top](#table-of-contents)
@@ -184,22 +185,31 @@ The below steps were followed.
 1. Create an account on Heroku.
 2. Ensure the Heroku student credits were successfully applied.
 3. On Dashboard. Click New. Then create new app.
+
 ![create app](./readme.images/heroku-new-app.png/)
+
 4. Navigate to Settings section.
+
 ![setting section](./readme.images/heroku-settings.png)
+
 5. Click Config Var.
 6. Add Config Var.
 - Key: PORT.
 - Value: 800.
 7. Click Buildpacks.
 - add Buildpacks for python and nodejs. This is to link the app to these softwares.
+
 ![Deployment](./readme.images/heroku-deployment.png)
+
 8. Navigation Bar - Deploy.
 9. Deployment Method - click Github
+
 ![Deploy to Github](./readme.images/deployed-to-github.png)
+
 - add name of repository into search bar for Heroku to search for.
 10. Deploys.
 - Click Automatic or Manual Deploy 
+
 ![Heroku Deploy](./readme.images/heroku-deployment.png)
 
 [Back to Top](#table-of-contents)
