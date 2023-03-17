@@ -1,5 +1,37 @@
 # Testing
 
+### User Goals
+
+#### First Time Player
+  - User can read the title of the quiz.
+    * the user can see this on the front screen. 
+    * Manually tested and confirmed working.
+
+  - User will immediately see the three game navigation options.
+    * this is the first input screen where the user has to input a choice.
+
+  - User can start quiz immediately.
+    - User can see the question and the answer options quickly.
+    - User gets immediate feedback if the answer is incorrect.
+    - User is provided the correct answer if answer is incorrect.
+    - User is provided total score automatically after quiz is finished.
+    - User has option to play again.
+     * in the Start quiz section this functality is forefilled.
+     * Manually tested and confirmed working.
+
+  - User can navigate to the game instructions.
+    * within in the front screen.
+    * Manually tested and confirmed working.
+
+  - User can quit the game easily.
+  * within  in the front screen.
+  * Manually tested and confirmed working.
+
+#### Returning Player
+ - User has familiarity with game structure and start quiz with out instructions.
+ - User will always have the questions asked at random. 
+  * Manually tested and confirmed working.
+
 ## Code Validation
 
 The testing of [Cape Town Quiz](https://cape-town-quiz.herokuapp.com/) was done through [CI Python Linter](https://pep8ci.herokuapp.com/).
@@ -13,7 +45,6 @@ The Bugs found and how they were fixed are defined in the below section.
 Quiz tested on: 
 
 |Browser.      | Outcome   |
-----------------------------
 |Google Chrome | No Errors |
 |Safari        | No Errors |
 |Edge          | No Errors |
@@ -23,8 +54,7 @@ Quiz tested on:
 
 Testing was completed on Am I responsive to show the quiz successfully responds to different screen sizes.
 
-Iphone SE |	Iphone XR |	Samsung Galaxy |Surface	Ipad |Laptop |1200px
----------------------------------------------------------------------	
+Iphone SE |	Iphone XR |	Samsung Galaxy |Surface	Ipad |Laptop |1200px	
 Render    |	Yes       |	Yes	           |Yes	         |Yes	 |Yes	
 
 ![Am I Responsive](./readme.images/am-i-responsive.png)
@@ -33,7 +63,6 @@ Render    |	Yes       |	Yes	           |Yes	         |Yes	 |Yes
 ## Bugs Found and fixed
 
 | Bug | Where | Fixed How|
---------------------------
 Error- Code to long | line 105 | Changed the naming of the lists being randomised. Logic taken from https://stackoverflow.com/questions/53158284/python-giving-a-e501-line-too-long-error
 Final score % being calculated from un randomised list | line 182 | Fixed updating the list the correct answer is taken from.
 Input validation - If incorrect selection is made (Not A,B,C,D) - user still able to go on to next question | line 142 | Fixed by create separate function for the validation. Logic taken from Code Insitiute love sandwiches project. 
@@ -54,6 +83,7 @@ Each screen where the user inputs data has been tested.
 - Validation
     - if not 1,2,3 - the user advised its an invalid selection and is directed back to the choice. 
 ![Navigation Validation](./readme.images/navigation-validation.png)
+</details><br />
 
 2. Question Answer.
 - Possible validation error:
@@ -62,6 +92,7 @@ Each screen where the user inputs data has been tested.
 - Validation. 
     - if not A,B,C or D the user advised its an invalid selection and is directed back to the choice. 
 ![Question Validation](./readme.images/question-validation.png)
+</details><br />
 
 3. Replay game.
 - The user is asked "How about another game? - YES OR NO?" 
@@ -70,6 +101,7 @@ Each screen where the user inputs data has been tested.
 - Validation
     - if not YES or NO the user advised its an invalid selection and is directed back to the choice. 
 ![Replay Game Validation](./readme.images/replay-game-validation.png)
+</details><br />
 
  ## Additional Testing
 

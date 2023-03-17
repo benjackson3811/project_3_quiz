@@ -1,9 +1,9 @@
-# Cape Town Quiz.
+# Cape Town Quiz
 
-The Python based project is a terminal based quiz game. The purpose of the quiz is to answer eight questions and get a score. 
-The terminal based interactive quiz educates the user on Cape Town. 
+The project is a python based terminal quiz game. The purpose of the quiz is to answer eight questions and get a score. 
+The goal of the quiz is an educational and fun to do quiz on Cape Town. 
 
-As a temporary resident of Cape Town, the desire to share my enjoyment of the city was my inspiration for the quiz.
+As a temporary resident of Cape Town, I wanted to share my enjoyment of the city this was my inspiration for the quiz.
 
 Play the game here - https://cape-town-quiz.herokuapp.com/
 
@@ -18,7 +18,7 @@ Play the game here - https://cape-town-quiz.herokuapp.com/
     - [User Goals](#user-goals)
       - [First Time Player](#first-time-player)
       - [Returning Player](#returning-player)
-  -[Design Process](#design-process)
+  - [Design Process](#design-process)
     - [Planning Stage](#planning-stage)
     - [Data Model](#data-model)
     - [Project Management](#project-management)
@@ -114,9 +114,9 @@ The first page the user sees when the page is loaded. The user is then invited t
 The game instructions are provided
 
 ![game instructions](./readme.images/game-instructions.png)
-### New Game
+### Start Game
 
-Starts New quiz game starts.
+Starts a new quiz game starts.
 
 ![Start Game](./readme.images/start-game.png)
 ### Check Answer
@@ -139,7 +139,7 @@ The user is provided the option to play again.
 ### Game exit
 
 The user is given the option to leave the quiz.
-[game exit](./readme.images/replay-game-validation.png)
+![game exit](./readme.images/replay-game-validation.png)
 
 [Back to Top](#table-of-contents)
 
