@@ -25,7 +25,7 @@ Play the game here - https://cape-town-quiz.herokuapp.com/
 - [Features](#features)
   - [Front Screen](#Front-screen)
   - [Game_Instructions](#game_instructions)
-  - [New Game](#new_game)
+  - [Start Game](#new_game)
   - [Check Answer](#check_answer)
   - [Display Score](#display_score)
   - [Play Again](#play-again)
@@ -81,6 +81,8 @@ A quiz that can be played multiple times with questions picked at random on each
 
 To visualise a process flow of the game is used [balsamiq](balsamiq.com). This helped with the project and time management to ensure that what i had visualised could be completed.
 
+![Process Flow](./readme.images/process-flow.png)
+
 ### Quiz Design
 
 The design and feel of the quiz is intentionally minimalistic. The design choice was to make it feel like a quiz game from a CLI application with the only colour being in the emoticons added.
@@ -106,44 +108,38 @@ However a learning point i have taken for the project is to plan further to grea
 
 The first page the user sees when the page is loaded. The user is then invited to make a choice. Their input is validated to ensure either a new game, the instructions or game exit options are selected.
 
-[front screen](/readme-images)
+![front screen](./readme.images/front-screen.png)
 ### Game Instruction
 
 The game instructions are provided
 
-[game instructions](/readme-images)
+![game instructions](./readme.images/game-instructions.png)
 ### New Game
 
-A new quiz game starts.
+Starts New quiz game starts.
 
-[new game](/readme-images)
+![Start Game](./readme.images/start-game.png)
 ### Check Answer
 
 With each guess made, the guesses are validated.
 This is to ensure either A,B,C or D is chosen. 
 With each correct guess, 1 point is added to the score. 
 
-[check answer](/readme-images)
+![check answer](./readme.images/check-answer.png)
 ### Display Score
 
 The total of the correct scores are added together and shown as a %.
 
-[display score](/readme-images)
+![display score](readme.images/display-score.png)
 ### Play Again
 
 The user is provided the option to play again.
 
-[play again](/readme-images)
+![play again](readme.images/play-again.png)
 ### Game exit
 
 The user is given the option to leave the quiz.
-[game exit](/readme-images)
-
-[Back to Top](#table-of-contents)
-
-## Data Model
-
-[process flow](/readme-images)
+[game exit](./readme.images/replay-game-validation.png)
 
 [Back to Top](#table-of-contents)
 
@@ -155,7 +151,7 @@ The user is given the option to leave the quiz.
 
 ## Testing
 
-For testing the application, this is documented in a separate testing file [Testing](/TESTING.MD)
+For testing the application, this is documented in a separate testing file [Testing](TESTING.MD)
 
 [Back to Top](#table-of-contents)
 
@@ -169,7 +165,7 @@ to long code - error on linter
 - [Heroku](https://www.heroku.com) - To deploy the game into a mock terminal that allow the game to be played online.
 - [Python](https://www.python.org/) - To produce and run the app.
 - [NodeJs](https://nodejs.org/en) To produce and run the app.
-- [CI Python Linter](https://pep8ci.herokuapp.com/) - To define errors
+- [CI Python Linter](https://pep8ci.herokuapp.com/) - To find and validate errors in code.
 - [Trello](https://trello.com/) - to manage project manage my ideas.
 - [Stack Overflow](https://stackoverflow.com/) - to find dedug and find solutions to my questions. 
 - [Real Python.com](https://realpython.com/) to find dedug and find solutions to my questions.
@@ -178,7 +174,6 @@ to long code - error on linter
 
 ## Python Packages
 - [Time](https://docs.python.org/3/library/time.html) - Used for the slow print functionality and for delaying print statements.
-- [Sys](https://docs.python.org/3/library/sys.html) - Used to provide access to some variables used or maintained by the interpreter.
 - [Random](https://docs.python.org/3/library/random.html) - Used within the slow print functionality.
 - [OS](https://docs.python.org/3/library/os.html) - Used to clear the screen in the terminal.
 
@@ -186,26 +181,31 @@ to long code - error on linter
 I deployed the game using Heroku, a cloud based container platform. This platform is specifically designed to deploy, manage and scale applications.
 
 The below steps were followed.
-1. Create an app on Heroku.
+1. Create an account on Heroku.
 2. Ensure the Heroku student credits were successfully applied.
 3. On Dashboard. Click New. Then create new app.
+![create app](./readme.images/heroku-new-app.png/)
 4. Navigate to Settings section.
+![setting section](./readme.images/heroku-settings.png)
 5. Click Config Var.
 6. Add Config Var.
 - Key: PORT.
 - Value: 800.
 7. Click Buildpacks.
 - add Buildpacks for python and nodejs. This is to link the app to these softwares.
+![Deployment](./readme.images/heroku-deployment.png)
 8. Navigation Bar - Deploy.
 9. Deployment Method - click Github
+![Deploy to Github](./readme.images/deployed-to-github.png)
 - add name of repository into search bar for Heroku to search for.
 10. Deploys.
 - Click Automatic or Manual Deploy 
+![Heroku Deploy](./readme.images/heroku-deployment.png)
 
 [Back to Top](#table-of-contents)
 
 ### Game Link
-https://cape-town-quiz.herokuapp.com/
+![Game Link](https://cape-town-quiz.herokuapp.com/)
 
 [Back to Top](#table-of-contents)
 

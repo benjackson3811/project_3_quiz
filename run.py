@@ -1,8 +1,9 @@
 # Your code goes here.
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
-
-import sys
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-class-docstring
+# pylint: disable=missing-function-docstring
 import os
 import random
 import time
@@ -57,7 +58,6 @@ def game_navigation():
         game_instructions()
         game_navigation()
     elif selection == "3":
-        sys.exit
         clear_screen()
     else:
         print("Invalid Selection - please select one of the the three options")
