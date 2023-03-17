@@ -55,7 +55,7 @@ def game_navigation():
     elif selection == "2":
         clear_screen()
         game_instructions()
-        game_navigation()()
+        game_navigation()
     elif selection == "3":
         sys.exit
         clear_screen()
@@ -71,16 +71,13 @@ def game_instructions():
     """
     print(" You will answer eight questions!")
     print()
-    print(" They will all be on topics on Cape Town")
-    print()
-    print(" - Cape Town History")
-    print(" - The Sea")
-    print(" - South African land animals")
+    print(" The topic of the questions will be Cape Town!")
     print()
     print(" Each question has four options, A, B, C or D")
     print()
-    print(" If your answer is correct, the system will tell you!")
+    print(" If your answer is correct, you can answer the next question")
     print()
+    print(" If the answer is incorrect, the system will tell you!")
     print()
     input("Press any button to go back to the main screen.  ")
     clear_screen()
@@ -198,8 +195,8 @@ def play_again():
     3) validates the response to ensure correct response given.
     """
     print("How about another game? ")
-    response = input("Do you want to play again? (yes or no): ")
-    response = response.upper()()
+    response = input("Do you want to play again? (YES or NO): ")
+    response = response.upper()
 
     if response == "YES":
         game_navigation()
@@ -213,14 +210,14 @@ def play_again():
 
 def front_screen():
     """
-    function purpose: to archor the game - 
+    function purpose: to archor the game -
     shows the display menu function options for the user
     set up - a while statement
     """
     game_start()
 
     while play_again():
-        game_navigation()()
+        game_navigation()
 
     print("Thanks for playing!!!")
 

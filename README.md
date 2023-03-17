@@ -1,117 +1,161 @@
-## [Portfolio_Project_3 --- Python_Essentials]
+# Cape Town Quiz.
 
-## Cape Town Quiz.
+The Python based project is a terminal based quiz game. The purpose of the quiz is to answer eight questions and get a score. 
+The terminal based interactive quiz educates the user on Cape Town. 
 
-The project is a terminal based quiz game. The purpose of the quiz is to answer five questions at random and get a score. 
-The Quiz is a terminal based interactive quiz where the user answers questions on Cape Towns History, South African land Animals and the Sea
+As a temporary resident of Cape Town, the desire to share my enjoyment of the city was my inspiration for the quiz.
 
 Play the game here - https://cape-town-quiz.herokuapp.com/
 
-## Table of Contents
+# Table of Contents
 
-[Table of Contents](#table-of-contents)
 
-[How to Play](#how-to-play)
-[Features](#features)
-- [Front Screen](#Front-screen)
-- [Display Menu](#display_menu)
-- [Game_Instructions](#game_instructions)
-- [New Game](#new_game)
-- [Clear Screen](#clear_screen)
-- [Check Answer](#check_answer)
-- [Display Score](#display_score)
-- [Play Again](#play-again)
-- [system_exit](#system_exit)
-
-[Data-Model](#data-model)
-
-[Features Left to Implement](#features-left-to-implement)
-
-[Credits](#credits)
-
-[Testing](#testing)
-- [Bugs Found and Fixed](#bugs-found-and-fixed)
-- [Unresolved Bugs](#unresolved-bugs)
-
-[Technologies Used](#technologies-used)
-
-[Deployment](#deployment)
-
-[Game Link](#game-link)
-
-[Cloning of the project](#cloning-of-the-project)
-
-[Acknowledgements](#acknowledgements)
+- [Cape Town Quiz](#cape-town-quiz)
+- [Table of Contents](#table-of-contents)
+- [User Experiance UX](#user-experiance-ux)
+  - [User-Stories](#user-stories)
+    - [Primary Goal](#primary-goal)
+    - [User Goals](#user-goals)
+      - [First Time Player](#first-time-player)
+      - [Returning Player](#returning-player)
+  -[Design Process](#design-process)
+    - [Planning Stage](#planning-stage)
+    - [Data Model](#data-model)
+    - [Project Management](#project-management)
+- [Features](#features)
+  - [Front Screen](#Front-screen)
+  - [Game_Instructions](#game_instructions)
+  - [New Game](#new_game)
+  - [Check Answer](#check_answer)
+  - [Display Score](#display_score)
+  - [Play Again](#play-again)
+  - [Game Exit](#game_exit)
+  - [Features Left to Implement](#features-left-to-implement)
+- [Testing](#testing)
+  - [Bugs Found and Fixed](#bugs-found-and-fixed)
+  - [Unresolved Bugs](#unresolved-bugs)
+  - [Technologies Used](#technologies-used)
+  - [Python Packages](#python-packages)
+- [Deployment](#deployment)
+  - [Game Link](#game-link)
+  - [Cloning of the project](#cloning-of-the-project)
+  - [Credits](#credits)
+    -[Content](#content)
+- [Acknowledgements](#acknowledgements)
 
 [Back to Top](#table-of-contents)
 
 <hr>
 
-## How to Play
+# User Experiance UX
 
-You will answer five questions!- They will be a mixture of three topics
+## User-Stories
 
- 1: Cape Town History
- 2: The Sea. 
- 3: South African Land Answers
+### Primary Goal
 
- Each question has four options, A, B, C or D
+The primary goal of the project is to create a simple quiz to educate people about Cape Town. 
 
- If your answer is correct, the system will tell you! 
+A quiz that can be played multiple times with questions picked at random on each playing. The questions have different difficulty level meaning they will be a challenge for 1st time players and return users.
+
+### User Goals
+
+#### First Time Player
+  - User can read the title of the quiz.
+  - User will immediately see the three game navigation options.
+  - User can start quiz immediately.
+    - User can see the question and the answer options quickly.
+    - User gets immediate feedback if the answer is incorrect.
+    - User is provided the correct answer if answer is incorrect.
+    - User is provided total score automatically after quiz is finished.
+    - User has option to play again.
+  - User can navigate to the game instructions.
+  - User can quit the game easily.
+#### Returning Player
+ - User has familiarity with game structure and start quiz with out instructions.
+ - User will always have the questions asked at random. 
+
+[Back to Top](#table-of-contents)
+
+## Design Process
+### Data Model
+
+To visualise a process flow of the game is used [balsamiq](balsamiq.com). This helped with the project and time management to ensure that what i had visualised could be completed.
+
+### Quiz Design
+
+The design and feel of the quiz is intentionally minimalistic. The design choice was to make it feel like a quiz game from a CLI application with the only colour being in the emoticons added.
+
+### Project Management
+
+To organise my ideas, provide structure and the to-do task/ sub tasks that had to be worked on etc.
+I used [Trello](https://trello.com/home) to log the completed tasks for stage.
+
+In the intial project kick off - i created a high level to do task. Then split this into sub-tasks.
+
+These tasks were then allocated down into the to-do, doing and done tasks. 
+
+I found this tool very useful to visualise the tasks that had to be done. 
+
+However a learning point i have taken for the project is to plan further to greater detail. For example, i feel i need to plan out the formulas to a low level of detail.
+
+
+[Back to Top](#table-of-contents)
 
 ## Features
+### Front screen
 
-* front screen
-* Display Menu
-* Game Instruction
-* Clear Screen
-* New Game
-* Check Answer
-* Display Score
-* Play Again
-* sys.exit
+The first page the user sees when the page is loaded. The user is then invited to make a choice. Their input is validated to ensure either a new game, the instructions or game exit options are selected.
+
+[front screen](/readme-images)
+### Game Instruction
+
+The game instructions are provided
+
+[game instructions](/readme-images)
+### New Game
+
+A new quiz game starts.
+
+[new game](/readme-images)
+### Check Answer
+
+With each guess made, the guesses are validated.
+This is to ensure either A,B,C or D is chosen. 
+With each correct guess, 1 point is added to the score. 
+
+[check answer](/readme-images)
+### Display Score
+
+The total of the correct scores are added together and shown as a %.
+
+[display score](/readme-images)
+### Play Again
+
+The user is provided the option to play again.
+
+[play again](/readme-images)
+### Game exit
+
+The user is given the option to leave the quiz.
+[game exit](/readme-images)
 
 [Back to Top](#table-of-contents)
 
 ## Data Model
-Link to game flow chart
+
+[process flow](/readme-images)
 
 [Back to Top](#table-of-contents)
 
 ## Features Left to Implement
 - Highscore - to allow the player to gain a log of their previous games. This would allow a username to be added.
+- More questions - to increase the randomness of the questions/
 - Multiple Topics 
-
-## Credits
-Bro Code youtube video on building a python based quiz game. - https://www.youtube.com/watch?v=yriw5Zh406s.
-Used as an initial guide on simple structure. The inital code for functions new_game(), check_answer(), display_score() and replay_game() was taken from here.
-
-Quiz functionality
-BroCode youtube Video. https://www.youtube.com/watch?v=zehwgTB0vV8&t=188s.
-Used as guide on how to build a python quiz.
-
-https://realpython.com/python-quiz-application/#step-2-make-your-application-user-friendly
-
-- logic on how to clear a screen in Python
-https://www.scaler.com/topics/how-to-clear-screen-in-python/
-
-- logic on how to quit a quiz. For the quit game funcgiton.
-https://stackoverflow.com/questions/58913904/how-to-quit-on-a-python-quiz
-
 
 
 ## Testing
 
-Testing completed. 
-1) Tested on CI Python Linter with one error found - too long code. 
-2) Tested validations to confirm only correct inputs are counted in confirming the final score. If incorrect selection is made (Not A,B,C,D - no score is added to final score.
-3) Tested in Local terminal and the code institue Heroku terminal
-
-
-Bugs Found and fixed
-https://stackoverflow.com/questions/19895028/randomly-shuffling-a-dictionary-in-python
-
-https://stackoverflow.com/questions/71838278/attribute-error-list-object-has-no-attribute-get
+For testing the application, this is documented in a separate testing file [Testing](/TESTING.MD)
 
 [Back to Top](#table-of-contents)
 
@@ -120,34 +164,42 @@ to long code - error on linter
 
 ## Technologies Used.
 
-- Github - https://github.com. To Edit and Deploy thw website.
-- Gitpod - https://gitpod.io/projects- To deploy and create the website.
-- Heroku- https://www.heroku.com - To deploy the game into a mock terminal that allow the game to be played online.
-- Python- https://www.python.org/ - To produce and run the app.
-- NodeJs - https://nodejs.org/en- To produce and run the app.
-- CI Python Linter https://pep8ci.herokuapp.com/ - To define errors
-- Trello - https://trello.com/ - to manage project manage my ideas.
-- Stack Overflow - https://stackoverflow.com/ - to find dedug and find solutions to my questions. 
-- Real Python.com https://realpython.com/- to find dedug and find solutions to my questions.
+- [Github](https://github.com). To Edit and Deploy thw website.
+- [Gitpod](https://gitpod.io/projects) To deploy and create the website.
+- [Heroku](https://www.heroku.com) - To deploy the game into a mock terminal that allow the game to be played online.
+- [Python](https://www.python.org/) - To produce and run the app.
+- [NodeJs](https://nodejs.org/en) To produce and run the app.
+- [CI Python Linter](https://pep8ci.herokuapp.com/) - To define errors
+- [Trello](https://trello.com/) - to manage project manage my ideas.
+- [Stack Overflow](https://stackoverflow.com/) - to find dedug and find solutions to my questions. 
+- [Real Python.com](https://realpython.com/) to find dedug and find solutions to my questions.
+- [Facebook-emoticons](https://www.i2symbol.com/facebook-emoticons)
+- [balsamiq](balsamiq.com) - used to create a process flow of my ideas
+
+## Python Packages
+- [Time](https://docs.python.org/3/library/time.html) - Used for the slow print functionality and for delaying print statements.
+- [Sys](https://docs.python.org/3/library/sys.html) - Used to provide access to some variables used or maintained by the interpreter.
+- [Random](https://docs.python.org/3/library/random.html) - Used within the slow print functionality.
+- [OS](https://docs.python.org/3/library/os.html) - Used to clear the screen in the terminal.
 
 ### Deployment.
 I deployed the game using Heroku, a cloud based container platform. This platform is specifically designed to deploy, manage and scale applications.
 
 The below steps were followed.
-1) Create an app on Heroku.
-2) Ensure the Heroku student credits were successfully applied.
-3) On Dashboard. Click New. Then create new app.
-4) Navigate to Settings section.
-5) Click Config Var.
-6) Add Config Var.
+1. Create an app on Heroku.
+2. Ensure the Heroku student credits were successfully applied.
+3. On Dashboard. Click New. Then create new app.
+4. Navigate to Settings section.
+5. Click Config Var.
+6. Add Config Var.
 - Key: PORT.
 - Value: 800.
-7) Click Buildpacks.
+7. Click Buildpacks.
 - add Buildpacks for python and nodejs. This is to link the app to these softwares.
-8) Navigation Bar - Deploy.
-9) Deployment Method - click Github
+8. Navigation Bar - Deploy.
+9. Deployment Method - click Github
 - add name of repository into search bar for Heroku to search for.
-10) Deploys.
+10. Deploys.
 - Click Automatic or Manual Deploy 
 
 [Back to Top](#table-of-contents)
@@ -168,6 +220,20 @@ To create a local clone of the project, please follow the below steps.
   - Press enter and your new cloned repository will be created within the desired location.
   
 [Back to Top](#table-of-contents)
+
+## Credits
+ 
+### Content
+- The idea for the structure of the quiz was taken from two Bro Code youtube videos on building a python based quiz game. 
+  - https://www.youtube.com/watch?v=yriw5Zh406s. The inital code for functions new_game(), check_answer(), display_score() and replay_game() was taken from here.
+- Quiz functionality BroCode youtube Video. https://www.youtube.com/watch?v=zehwgTB0vV8&t=188s.
+Used as guide on how to build a python quiz.
+- Code institue Love Sandwiches Project. Was used for help and gudiance in the input validation functions.
+- Real Python. For guidance on the sorting of the questions https://realpython.com/python-quiz-application/#step-2-make-your-application-user-friendly.
+- Stack Overflow.
+  - logic on how to quit a quiz. For the quit game funciton. https://stackoverflow.com/questions/58913904/how-to-quit-on-a-python-quiz
+  - How to generate random questions for a quiz game. https://stackoverflow.com/questions/71743506/how-to-generate-random-questions-and-corresponding-answers-for-quiz-game
+
 
 ### Acknowledgements
 
