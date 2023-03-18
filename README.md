@@ -170,7 +170,7 @@ to long code - error on linter
 - [Trello](https://trello.com/) - to manage project manage my ideas.
 - [Stack Overflow](https://stackoverflow.com/) - to find dedug and find solutions to my questions. 
 - [Real Python.com](https://realpython.com/) to find dedug and find solutions to my questions.
-- [Facebook-emoticons](https://www.i2symbol.com/facebook-emoticons)
+- [Facebook-emoticons](https://www.i2symbol.com/facebook-emoticons) - to add some colour to the game.
 - [balsamiq](balsamiq.com) - used to create a process flow of my ideas
 
 ## Python Packages
